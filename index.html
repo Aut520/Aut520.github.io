@@ -19,6 +19,18 @@
 					GitHub homepage <a href="https://github.com/Aut520/">Aut</a>.</h1>
 				</div>
 			</header>
+		<p id="hitokoto"><a href="#" id="hitokoto_text">获取中...</a></p>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const hitokoto = document.getElementById('hitokoto_text')
+      hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+      hitokoto.innerText = data.hitokoto
+    })
+    .catch(console.error)
+</script>
+
 
 		<!-- Main -->
 			<div id="main">
@@ -123,17 +135,6 @@
 							</div>
 						</div>
 					</section>
-<p id="hitokoto"><a href="#" id="hitokoto_text">获取中...</a></p>
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      const hitokoto = document.getElementById('hitokoto_text')
-      hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
-      hitokoto.innerText = data.hitokoto
-    })
-    .catch(console.error)
-</script>
 
 
 <body>
