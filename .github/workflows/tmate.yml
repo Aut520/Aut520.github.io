@@ -1,4 +1,4 @@
-name: CSSH
+name: ssh
 on: [push]
 jobs:
   build:
