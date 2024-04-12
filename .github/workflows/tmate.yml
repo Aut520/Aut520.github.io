@@ -1,4 +1,4 @@
-name: sb
+name: 666666
 on: [push]
 jobs:
   build:
